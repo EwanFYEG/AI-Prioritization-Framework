@@ -4,123 +4,91 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Prioritization Framework</title>
-  <style>
-    .fade-section {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+<body>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const sections = document.querySelectorAll(".fade-section");
+  <script src="script.js"></script>
 
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = 1;
-            entry.target.style.transform = "translateY(0)";
-          }
-        });
-      }, { threshold: 0.3 });
-
-      sections.forEach((section) => observer.observe(section));
-    });
-  </script>
-
-  <div class="fade-section" style="
-    padding: 20px; 
-    border: 1px solid #ccc; 
-    border-radius: 8px; 
-    background-color: #f9f9f9;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-    max-width: 900px;
-    margin: auto;
-  ">
+  <div class="fade-section container">
     
-    <h2 style="color: #2c3e50; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-      Scenario for AI Use Case Prioritisation
-    </h2>
-    <p style="font-size: 16px; line-height: 1.5; text-align: justify;">
+    <h2>Scenario for AI Use Case Prioritisation</h2>
+    <p>
       GreenGrain Foods Ltd is a mid-sized food manufacturing company experiencing operational inefficiencies and increased competition in the market.
       They have identified a number of potential AI use cases but currently lack a structured way to evaluate them for delivery.
     </p>
 
-    <h3 style="color: #2980b9; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">The Task</h3>
-    <p style="font-size: 16px; line-height: 1.5; text-align: justify;">
+    <h3>The Task</h3>
+    <p>
       Design and apply a prioritisation framework to help GreenGrain Foods decide which AI initiatives to focus on.
       This solution will be presented to a wide range of audiences with technical abilities.
     </p>
 
-    <h3 style="color: #2980b9; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">The Prioritization Matrix</h3>
-    <p style="font-size: 16px; line-height: 1.5;">Each AI initiative is assessed using the following six key criteria, with weights reflecting their strategic importance:</p>
-    
-    <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 16px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <h3>The Prioritization Matrix</h3>
+
+    <table>
       <thead>
-        <tr style="background-color: #3498db; color: white;">
-          <th style="padding: 12px; border: 1px solid #ddd;">Criteria</th>
-          <th style="padding: 12px; border: 1px solid #ddd;">Description</th>
-          <th style="padding: 12px; border: 1px solid #ddd;">Weighting</th>
+        <tr>
+          <th>Criteria</th>
+          <th>Description</th>
+          <th>Weighting</th>
         </tr>
       </thead>
       <tbody>
-        <tr style="background-color: #ecf0f1;">
-          <td style="padding: 10px; border: 1px solid #ddd;">Business Value/Impact</td>
-          <td style="padding: 10px; border: 1px solid #ddd;">Evaluates potential for revenue growth, cost reductions, market differentiation, and enhanced customer experience.</td>
-          <td style="padding: 10px; border: 1px solid #ddd;">25%</td>
+        <tr>
+          <td>Business Value/Impact</td>
+          <td>Evaluates potential for revenue growth, cost reductions, market differentiation, and enhanced customer experience.</td>
+          <td>25%</td>
         </tr>
         <tr>
-          <td style="padding: 10px; border: 1px solid #ddd;">Strategic Alignment</td>
-          <td style="padding: 10px; border: 1px solid #ddd;">Assesses how well the initiative supports the company’s long-term vision and competitive positioning.</td>
-          <td style="padding: 10px; border: 1px solid #ddd;">20%</td>
-        </tr>
-        <tr style="background-color: #ecf0f1;">
-          <td style="padding: 10px; border: 1px solid #ddd;">Technical Feasibility</td>
-          <td style="padding: 10px; border: 1px solid #ddd;">Considers implementation complexity, resource availability, and integration with existing systems.</td>
-          <td style="padding: 10px; border: 1px solid #ddd;">15%</td>
+          <td>Strategic Alignment</td>
+          <td>Assesses how well the initiative supports the company’s long-term vision and competitive positioning.</td>
+          <td>20%</td>
         </tr>
         <tr>
-          <td style="padding: 10px; border: 1px solid #ddd;">Data Readiness & Quality</td>
-          <td style="padding: 10px; border: 1px solid #ddd;">Reviews whether the necessary data is available, clean, and ready to power the AI solution.</td>
-          <td style="padding: 10px; border: 1px solid #ddd;">15%</td>
-        </tr>
-        <tr style="background-color: #ecf0f1;">
-          <td style="padding: 10px; border: 1px solid #ddd;">Cost & Risk Assessment</td>
-          <td style="padding: 10px; border: 1px solid #ddd;">Analyzes expected costs, ongoing expenditures, and potential risks, including regulatory and scalability concerns.</td>
-          <td style="padding: 10px; border: 1px solid #ddd;">15%</td>
+          <td>Technical Feasibility</td>
+          <td>Considers implementation complexity, resource availability, and integration with existing systems.</td>
+          <td>15%</td>
         </tr>
         <tr>
-          <td style="padding: 10px; border: 1px solid #ddd;">Time-to-Value</td>
-          <td style="padding: 10px; border: 1px solid #ddd;">Estimates the deployment timeline and the time needed to achieve measurable benefits.</td>
-          <td style="padding: 10px; border: 1px solid #ddd;">10%</td>
+          <td>Data Readiness & Quality</td>
+          <td>Reviews whether the necessary data is available, clean, and ready to power the AI solution.</td>
+          <td>15%</td>
+        </tr>
+        <tr>
+          <td>Cost & Risk Assessment</td>
+          <td>Analyzes expected costs, ongoing expenditures, and potential risks, including regulatory and scalability concerns.</td>
+          <td>15%</td>
+        </tr>
+        <tr>
+          <td>Time-to-Value</td>
+          <td>Estimates the deployment timeline and the time needed to achieve measurable benefits.</td>
+          <td>10%</td>
         </tr>
       </tbody>
     </table>
 
-    <h3 style="color: #2980b9; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Visualizing the Prioritization Framework</h3>
-    
-    <div style="text-align: center;">
-      <img src="AI_matrix.PNG" alt="Correlation Plot" style="max-width: 100%; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1); margin-top: 15px;">
-      <p style="font-size: 16px;">📌 **AI Matrix Explanation:** Maps AI initiatives based on feasibility and cost.</p>
+    <h3>Visualizing the Prioritization Framework</h3>
+
+    <div class="image-container">
+      <img src="AI_matrix.PNG" alt="AI Prioritization Matrix">
+      <p>📌 AI Matrix Explanation: Maps AI initiatives based on feasibility and cost.</p>
     </div>
 
-    <div style="text-align: center;">
-      <img src="Corr Plot.png" alt="Correlation Plot" style="max-width: 100%; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0,0,0,0.1); margin-top: 15px;">
-      <p style="font-size: 16px;">📊 **Correlation Analysis:** Examines statistical relationships between feasibility, cost, and prioritization factors.</p>
+    <div class="image-container">
+      <img src="Corr Plot.png" alt="Correlation Plot">
+      <p>📊 Correlation Analysis: Examines statistical relationships between feasibility, cost, and prioritization factors.</p>
     </div>
 
-    <h3 style="color: #2980b9; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Key Insights & Takeaways</h3>
-    <ul style="font-size: 16px; line-height: 1.5;">
+    <h3>Key Insights & Takeaways</h3>
+    <ul>
       <li><strong>High Feasibility & Low Cost</strong> → Ideal for Quick Wins.</li>
       <li><strong>High Feasibility & High Cost</strong> → Strategic, but needs investment.</li>
       <li><strong>Cost & Business Value show inverse correlation</strong> → Not all costly projects drive strong value.</li>
       <li><strong>Feasibility strongly links to Strategic Alignment</strong> → Well-aligned initiatives tend to be easier to execute.</li>
     </ul>
 
-    <p style="font-size: 16px; line-height: 1.5;">
+    <p>
       💡 *This framework enables transparent, evidence-based AI decision-making, evolving dynamically with market shifts and data availability.*
     </p>
 
