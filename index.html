@@ -4,11 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Prioritization Framework</title>
+  <style>
+    .fade-section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+  </style>
 </head>
 <body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
 
-  <!-- AI Prioritization Framework Section -->
-  <div style="
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const sections = document.querySelectorAll(".fade-section");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, { threshold: 0.3 });
+
+      sections.forEach((section) => observer.observe(section));
+    });
+  </script>
+
+  <div class="fade-section" style="
     padding: 20px; 
     border: 1px solid #ccc; 
     border-radius: 8px; 
