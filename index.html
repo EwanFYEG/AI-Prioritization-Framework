@@ -16,50 +16,163 @@
       <section class="fade-section">
         <h3>The Prioritization Matrix</h3>
         <table>
-          <thead>
-            <tr>
-              <th>Criteria</th>
-              <th>Description</th>
-              <th>Assessment Metrics</th>
-              <th>Example Score</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Business Value/Impact</td>
-              <td>Potential revenue growth, cost savings, and market differentiation.</td>
-              <td>ROI (%), Cost Savings (£), Score (1-5)</td>
-              <td>5</td>
-            </tr>
+        <thead>
+          <tr>
+            <th>Criteria</th>
+            <th>Description</th>
+            <th>Assessment Metrics</th>
+            <th>Example Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Business Value/Impact</td>
+            <td>
+              Evaluates potential for revenue growth, cost reductions, market differentiation, and enhanced customer experience.
+            </td>
+            <td>
+              Estimated ROI (%), Potential Cost Savings (£), Market Reach &amp; Differentiation. Score (1-5)
+            </td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>Strategic Alignment</td>
+            <td>
+              Assesses how well the initiative supports the company’s long-term vision and competitive positioning.
+            </td>
+            <td>
+              Alignment Score, supports key business objectives (Yes/No) &amp; Competitive Edge Factor. Overall Score (1-5)
+            </td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>Technical Feasibility</td>
+            <td>
+              Considers implementation complexity, resource availability, and integration with existing systems.
+            </td>
+            <td>
+              Estimated Development Effort (Hours), Complexity Rating (1-5) &amp; Compatibility with Existing Systems (%). Overall Score (1-5)
+            </td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>Data Readiness &amp; Quality</td>
+            <td>
+              Reviews whether the necessary data is available, clean, and ready to power the AI solution.
+            </td>
+            <td>
+              Data Availability Score (1-5), Clean Dataset Percentage (%), Completeness of Historical Data (%). Overall Score (1-5)
+            </td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>Cost &amp; Risk Assessment</td>
+            <td>
+              Analyzes expected costs, ongoing expenditures, and potential risks, including regulatory and scalability concerns.
+            </td>
+            <td>
+              Estimated Implementation Cost (£), Risk Exposure (1-5) &amp; Regulatory compliance hurdles (Yes/No). Overall Score (1-5)
+            </td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Time-to-Value</td>
+            <td>
+              Estimates the deployment timeline and the time needed to achieve measurable benefits.
+            </td>
+            <td>
+              Expected rollout time (Weeks), Time before measurable impact (Months) &amp; Urgency rating (1-5). Overall Score (1-5)
+            </td>
+            <td>3</td>
+          </tr>
           </tbody>
         </table>
       </section>
 
       <section class="fade-section">
-        <h3>Formula for Prioritization Score</h3>
-        <p class="formula">Priority Score Formula:</p>
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <mrow>
-            <mi>Priority Score</mi>
-            <mo>=</mo>
-            <mfrac>
+        <h3>Formula for RICE Style Prioritization Score</h3>
+        <details>
+          <summary>Click to expand the prioritization formula</summary>
+          <p>We define an AI prioritization score based on weighted criteria:</p>
+          <p><strong>Priority Score Formula:</strong></p>
+          <p>
+            <math>
               <mrow>
-                <mi>V</mi>
-                <mo>×</mo>
-                <mi>A</mi>
-                <mo>×</mo>
-                <mi>F</mi>
-                <mo>×</mo>
-                <mi>D</mi>
+                <mi>Priority Score</mi>
+                <mo>=</mo>
+                <mfrac>
+                  <mrow>
+                    <mi>V</mi>
+                    <mo>×</mo>
+                    <mi>A</mi>
+                    <mo>×</mo>
+                    <mi>F</mi>
+                    <mo>×</mo>
+                    <mi>D</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>C</mi>
+                    <mo>×</mo>
+                    <mi>T</mi>
+                  </mrow>
+                </mfrac>
               </mrow>
+            </math>
+          </p>
+          <p><strong>Where:</strong></p>
+          <ul>
+            <li><strong>V = Business Value</strong> (Revenue growth, cost savings, market positioning)</li>
+            <li><strong>A = Strategic Alignment</strong> (Vision alignment, competitive advantage)</li>
+            <li><strong>F = Feasibility</strong> (Development complexity, integration readiness)</li>
+            <li><strong>D = Data Readiness</strong> (Data availability, quality)</li>
+            <li><strong>C = Cost &amp; Risk</strong> (Financial investment, regulatory concerns)</li>
+            <li><strong>T = Time-to-Value</strong> (Deployment speed, measurable impact timeframe)</li>
+          </ul>
+          <p><strong>Scoring Breakdown (1-5 Scale):</strong></p>
+          <ul>
+            <li>Higher scores indicate greater feasibility, alignment, and value.</li>
+            <li>Lower cost &amp; time increase prioritization.</li>
+            <li>Dividing by Cost &amp; Time favors high-impact, low-effort AI initiatives.</li>
+          </ul>
+          <h4>Example Use Case Calculation:</h4>
+          <p>Suppose an AI project scores:</p>
+          <ul>
+            <li>V = 5, A = 4, F = 3, D = 4</li>
+            <li>C = 2, T = 3</li>
+          </ul>
+          <p>
+            <math>
               <mrow>
-                <mi>C</mi>
-                <mo>×</mo>
-                <mi>T</mi>
+                <mi>Priority Score</mi>
+                <mo>=</mo>
+                <mfrac>
+                  <mrow>
+                    <mn>5</mn>
+                    <mo>×</mo>
+                    <mn>4</mn>
+                    <mo>×</mo>
+                    <mn>3</mn>
+                    <mo>×</mo>
+                    <mn>4</mn>
+                  </mrow>
+                  <mrow>
+                    <mn>2</mn>
+                    <mo>×</mo>
+                    <mn>3</mn>
+                  </mrow>
+                </mfrac>
+                <mo>=</mo>
+                <mfrac>
+                  <mn>240</mn>
+                  <mn>6</mn>
+                </mfrac>
+                <mo>=</mo>
+                <mn>40</mn>
               </mrow>
-            </mfrac>
-          </mrow>
-        </math>
+            </math>
+          </p>
+          <p>A higher score suggests strong impact potential with manageable effort.</p>
+        </details>
       </section>
 
       <section class="fade-section">
