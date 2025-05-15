@@ -87,3 +87,13 @@ tr:hover {
   width: 100%;
 }
 
+/* Gives a Line Between Sections */
+.section-divider {
+  border: 0;
+  height: 2px;
+  background: #2980b9; /* Adjust color */
+  margin: 40px auto; /* Adds spacing */
+  width: 90%;
+}
+
+
