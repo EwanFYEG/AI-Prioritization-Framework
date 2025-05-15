@@ -1,39 +1,28 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const sections = document.querySelectorAll(".fade-section");
-  let currentIndex = 0;
+  // Select all the sections that should fade in
+  const faders = document.querySelectorAll(".fade-section");
 
-  function showSection(index) {
-    sections.forEach((section, i) => {
-      section.style.display = i === index ? "block" : "none";
-    });
-  }
+  // Set up options for the Intersection Observer.
+  // Adjust the threshold and rootMargin as needed.
+  const appearOptions = {
+    threshold: 0.2, // Trigger when 20% of the element is in view
+    rootMargin: "0px 0px -50px 0px"
+  };
 
-  // Get the "next" button element and attach an event listener if it exists.
-  const nextBtn = document.getElementById("next");
-  if (nextBtn) {
-    nextBtn.addEventListener("click", function () {
-      if (currentIndex < sections.length - 1) {
-        currentIndex++;
-        showSection(currentIndex);
+  // Create the observer instance
+  const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Add the fade-in class when the section comes into view
+        entry.target.classList.add("appear");
+        // Optionally unobserve the element after it appears
+        observer.unobserve(entry.target);
       }
     });
-  } else {
-    console.warn('Element with id "next" not found.');
-  }
+  }, appearOptions);
 
-  // Get the "prev" button element and attach an event listener if it exists.
-  const prevBtn = document.getElementById("prev");
-  if (prevBtn) {
-    prevBtn.addEventListener("click", function () {
-      if (currentIndex > 0) {
-        currentIndex--;
-        showSection(currentIndex);
-      }
-    });
-  } else {
-    console.warn('Element with id "prev" not found.');
-  }
-
-  // Initially display the first section.
-  showSection(currentIndex);
+  // Observe each fade-section element
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
 });
