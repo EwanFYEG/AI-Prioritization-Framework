@@ -7,294 +7,37 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div class="container fade-section">
-    <section class="fade-section">
-      <h2>Unlocking AI’s Potential: Prioritizing the Right Use Cases</h2>
-      <p>
-        GreenGrain Foods Ltd is a mid-sized food manufacturing company experiencing operational inefficiencies and increased competition in the market.
-        They have identified a number of potential AI use cases but currently lack a structured way to evaluate them for delivery.
-      </p>
-      <h3>The Task</h3>
-      <p>
-        Design and apply a prioritisation framework to help GreenGrain Foods decide which AI initiatives to focus on.
-        This solution will be presented to a wide range of audiences with technical abilities.
-      </p>
-    </section>
-    <section class="fade-section">
-      <h3>The Prioritization Matrix</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Criteria</th>
-            <th>Description</th>
-            <th>Assessment Metrics</th>
-            <th>Example Score</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Business Value/Impact</td>
-            <td>
-              Evaluates potential for revenue growth, cost reductions, market differentiation, and enhanced customer experience.
-            </td>
-            <td>
-              Estimated ROI (%), Potential Cost Savings (£), Market Reach &amp; Differentiation. Score (1-5)
-            </td>
-            <td>5</td>
-          </tr>
-          <tr>
-            <td>Strategic Alignment</td>
-            <td>
-              Assesses how well the initiative supports the company’s long-term vision and competitive positioning.
-            </td>
-            <td>
-              Alignment Score, supports key business objectives (Yes/No) &amp; Competitive Edge Factor. Overall Score (1-5)
-            </td>
-            <td>4</td>
-          </tr>
-          <tr>
-            <td>Technical Feasibility</td>
-            <td>
-              Considers implementation complexity, resource availability, and integration with existing systems.
-            </td>
-            <td>
-              Estimated Development Effort (Hours), Complexity Rating (1-5) &amp; Compatibility with Existing Systems (%). Overall Score (1-5)
-            </td>
-            <td>3</td>
-          </tr>
-          <tr>
-            <td>Data Readiness &amp; Quality</td>
-            <td>
-              Reviews whether the necessary data is available, clean, and ready to power the AI solution.
-            </td>
-            <td>
-              Data Availability Score (1-5), Clean Dataset Percentage (%), Completeness of Historical Data (%). Overall Score (1-5)
-            </td>
-            <td>4</td>
-          </tr>
-          <tr>
-            <td>Cost &amp; Risk Assessment</td>
-            <td>
-              Analyzes expected costs, ongoing expenditures, and potential risks, including regulatory and scalability concerns.
-            </td>
-            <td>
-              Estimated Implementation Cost (£), Risk Exposure (1-5) &amp; Regulatory compliance hurdles (Yes/No). Overall Score (1-5)
-            </td>
-            <td>2</td>
-          </tr>
-          <tr>
-            <td>Time-to-Value</td>
-            <td>
-              Estimates the deployment timeline and the time needed to achieve measurable benefits.
-            </td>
-            <td>
-              Expected rollout time (Weeks), Time before measurable impact (Months) &amp; Urgency rating (1-5). Overall Score (1-5)
-            </td>
-            <td>3</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    <section class="fade-section">
-      <h3>Formula for RICE Style Prioritization Score</h3>
-      <details>
-        <summary>Click to expand the prioritization formula</summary>
-        <p>We define an AI prioritization score based on weighted criteria:</p>
-        <p><strong>Priority Score Formula:</strong></p>
-        <p>
-          <math>
-            <mrow>
-              <mi>Priority Score</mi>
-              <mo>=</mo>
-              <mfrac>
-                <mrow>
-                  <mi>V</mi>
-                  <mo>×</mo>
-                  <mi>A</mi>
-                  <mo>×</mo>
-                  <mi>F</mi>
-                  <mo>×</mo>
-                  <mi>D</mi>
-                </mrow>
-                <mrow>
-                  <mi>C</mi>
-                  <mo>×</mo>
-                  <mi>T</mi>
-                </mrow>
-              </mfrac>
-            </mrow>
-          </math>
-        </p>
-        <p><strong>Where:</strong></p>
-        <ul>
-          <li><strong>V = Business Value</strong> (Revenue growth, cost savings, market positioning)</li>
-          <li><strong>A = Strategic Alignment</strong> (Vision alignment, competitive advantage)</li>
-          <li><strong>F = Feasibility</strong> (Development complexity, integration readiness)</li>
-          <li><strong>D = Data Readiness</strong> (Data availability, quality)</li>
-          <li><strong>C = Cost &amp; Risk</strong> (Financial investment, regulatory concerns)</li>
-          <li><strong>T = Time-to-Value</strong> (Deployment speed, measurable impact timeframe)</li>
-        </ul>
-        <p><strong>Scoring Breakdown (1-5 Scale):</strong></p>
-        <ul>
-          <li>Higher scores indicate greater feasibility, alignment, and value.</li>
-          <li>Lower cost &amp; time increase prioritization.</li>
-          <li>Dividing by Cost &amp; Time favors high-impact, low-effort AI initiatives.</li>
-        </ul>
-        <h4>Example Use Case Calculation:</h4>
-        <p>Suppose an AI project scores:</p>
-        <ul>
-          <li>V = 5, A = 4, F = 3, D = 4</li>
-          <li>C = 2, T = 3</li>
-        </ul>
-        <p>
-          <math>
-            <mrow>
-              <mi>Priority Score</mi>
-              <mo>=</mo>
-              <mfrac>
-                <mrow>
-                  <mn>5</mn>
-                  <mo>×</mo>
-                  <mn>4</mn>
-                  <mo>×</mo>
-                  <mn>3</mn>
-                  <mo>×</mo>
-                  <mn>4</mn>
-                </mrow>
-                <mrow>
-                  <mn>2</mn>
-                  <mo>×</mo>
-                  <mn>3</mn>
-                </mrow>
-              </mfrac>
-              <mo>=</mo>
-              <mfrac>
-                <mn>240</mn>
-                <mn>6</mn>
-              </mfrac>
-              <mo>=</mo>
-              <mn>40</mn>
-            </mrow>
-          </math>
-        </p>
-        <p>A higher score suggests strong impact potential with manageable effort.</p>
-      </details>
-    </section>
-    <section class="fade-section">
-      <h3>Visualizing the Prioritization Framework</h3>
-      <div class="image-container">
-        <img src="Compressed%20AI%20Matrix.jpg" alt="AI Prioritization Matrix">
-        <p>📌 AI Matrix Explanation: Maps AI initiatives based on feasibility and cost.</p>
-      </div>
-      <button class="code-toggle-button" data-target="r-code-1">Show/Hide R Code</button>
-      <pre id="r-code-1" style="display: none;">
-<code>
-# Load required libraries
-library(ggplot2)
+    <div class="container">
+      <section class="fade-section">
+        <h2>Unlocking AI’s Potential: Prioritizing the Right Use Cases</h2>
+        <p>GreenGrain Foods Ltd is a mid-sized food manufacturing company experiencing operational inefficiencies and increased competition.</p>
+      </section>
+      
+      <section class="fade-section">
+        <h3>The Prioritization Matrix</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Criteria</th>
+              <th>Description</th>
+              <th>Assessment Metrics</th>
+              <th>Example Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Business Value/Impact</td>
+              <td>Potential revenue growth, cost savings, and market differentiation.</td>
+              <td>ROI (%), Cost Savings (£), Score (1-5)</td>
+              <td>5</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
-# Define prioritization criteria with feasibility and cost scores
-eisenhower_data <- data.frame(
-  Criteria = c("Business Value", "Strategic Alignment", "Technical Feasibility", 
-               "Data Readiness", "Cost & Risk", "Time-to-Value"),
-  Feasibility = c(5, 4, 3, 4, 2, 4),
-  Cost = c(2, 3, 4, 2.5, 5, 1)
-)
-</code>
-      </pre>
-      <div class="summary-container">
-        <h4>Eisenhower Matrix Summary:</h4>
-        <p>This matrix categorizes AI initiatives based on <strong>Feasibility</strong> and <strong>Cost</strong>, assigning them to four quadrants:</p>
-        <ul>
-          <li><strong>Quick Wins (High Feasibility, Low Cost):</strong> Business Value and Time-to-Value fall here, meaning they should be prioritized for immediate action.</li>
-          <li><strong>Strategic Investments (High Feasibility, High Cost):</strong> Strategic Alignment and Data Readiness are positioned here—worthy long-term investments, despite their higher cost.</li>
-          <li><strong>Rethink (Low Feasibility, Low Cost):</strong> Technical Feasibility sits in this area, indicating the need for further refinement before implementation.</li>
-          <li><strong>Avoid (Low Feasibility, High Cost):</strong> Cost & Risk lands here, suggesting it's too expensive and difficult to justify implementation.</li>
-        </ul>
-        <p>This visualization is useful for balancing resources effectively and ensuring high-value, achievable initiatives get priority.</p>
-      </div>
-      <div class="image-container">
-        <img src="Corr%20Plot.png" alt="Correlation Plot">
-        <p>📊 Correlation Analysis: Examines statistical relationships between feasibility, cost, and prioritization factors.</p>
-      </div>
-      <button class="code-toggle-button" data-target="r-code-2">Show/Hide R Code</button>
-      <pre id="r-code-2" style="display: none;">
-<code>
-# Load library
-library(corrplot)
-
-# Compute correlation matrix
-cor_matrix <- cor(eisenhower_data)
-
-# Generate a more blended correlation plot
-corrplot(
-  cor_matrix, method = "shade", 
-  col = colorRampPalette(c("darkblue", "white", "darkred"))(200),
-  addCoef.col = "black",
-  tl.cex = 1.2,
-  cl.pos = "b",
-  number.cex = 0.8,
-  shade.col = NA, # Allows colors to blend
-  bg = "white", # Clean background for diffusion effect
-  mar = c(0, 0, 1, 0) # Adjust margins
-)
-</code>
-      </pre>
-      <div class="summary-container">
-        <h4>Correlation Plot Summary:</h4>
-        <p>This correlation matrix reveals relationships between <strong>key prioritization criteria</strong>:</p>
-        <ul>
-          <li><strong>Strong Positive Correlations:</strong> Business Value aligns well with Strategic Alignment and Data Readiness, meaning investments in these areas often reinforce each other.</li>
-          <li><strong>Negative or Weak Relationships:</strong> Cost & Risk has weaker connections with other criteria, reinforcing its high cost trade-off.</li>
-          <li><strong>Technical Feasibility Links:</strong> Technical Feasibility shows moderate relationships across multiple factors, meaning it plays a bridging role in viability analysis.</li>
-        </ul>
-        <p>Using this correlation visualization, we can assess dependencies and make evidence-based prioritization decisions.</p>
-      </div>
-    </section>
-    <section class="fade-section">
-      <h3>Key Insights &amp; Takeaways</h3>
-      <ul>
-        <li><strong>High Feasibility &amp; Low Cost</strong> → Ideal for Quick Wins.</li>
-        <li><strong>High Feasibility &amp; High Cost</strong> → Strategic, but needs investment.</li>
-        <li><strong>Cost &amp; Business Value show inverse correlation</strong> → Not all costly projects drive strong value.</li>
-        <li><strong>Feasibility strongly links to Strategic Alignment</strong> → Well-aligned initiatives tend to be easier to execute.</li>
-      </ul>
-      <p>💡 This framework enables transparent, evidence-based AI decision-making, evolving dynamically with market shifts and data availability.</p>
-    </section>
-    <!-- AI Initiative Prioritization Section -->
-    <section class="fade-section">
-      <h3>AI Initiative Prioritization</h3>
-      <style>
-        /* Inline styles for this section (if needed) */
-        body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-        padding: 20px;
-        }
-        table {
-        width: 100%;
-        border-collapse: collapse;
-        }
-        th,
-        td {
-        border: 1px solid #ddd;
-        padding: 10px;
-        text-align: center;
-        }
-        th {
-        background-color: #f4f4f4;
-        }
-        .formula {
-        font-size: 18px;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 20px;
-        }
-      </style>
-    </section>
-    <!-- Priority Score Formula Section -->
-    <section class="fade-section">
-      <h2>Priority Score Formula</h2>
-      <p class="formula">
+      <section class="fade-section">
+        <h3>Formula for Prioritization Score</h3>
+        <p class="formula">Priority Score Formula:</p>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <mrow>
             <mi>Priority Score</mi>
@@ -302,157 +45,31 @@ corrplot(
             <mfrac>
               <mrow>
                 <mi>V</mi>
-                <mo>&times;</mo>
+                <mo>×</mo>
                 <mi>A</mi>
-                <mo>&times;</mo>
+                <mo>×</mo>
                 <mi>F</mi>
-                <mo>&times;</mo>
+                <mo>×</mo>
                 <mi>D</mi>
               </mrow>
               <mrow>
                 <mi>C</mi>
-                <mo>&times;</mo>
+                <mo>×</mo>
                 <mi>T</mi>
               </mrow>
             </mfrac>
           </mrow>
         </math>
-      </p>
-    </section>
-    <!-- Ranked AI Initiatives Section -->
-    <section class="fade-section">
-      <h2>Ranked AI Initiatives</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Rank</th>
-            <th>Initiative</th>
-            <th>Business Value (V)</th>
-            <th>Strategic Alignment (A)</th>
-            <th>Feasibility (F)</th>
-            <th>Data Readiness (D)</th>
-            <th>Cost &amp; Risk (C)</th>
-            <th>Time-to-Value (T)</th>
-            <th>Priority Score</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Dynamic Delivery Optimization</td>
-            <td>4</td>
-            <td>5</td>
-            <td>3</td>
-            <td>4</td>
-            <td>2</td>
-            <td>3</td>
-            <td>80.00</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Generative AI Assistant</td>
-            <td>5</td>
-            <td>4</td>
-            <td>4</td>
-            <td>3</td>
-            <td>2</td>
-            <td>3</td>
-            <td>80.00</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Demand Forecasting</td>
-            <td>5</td>
-            <td>4</td>
-            <td>4</td>
-            <td>5</td>
-            <td>3</td>
-            <td>4</td>
-            <td>66.67</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Predictive Maintenance</td>
-            <td>5</td>
-            <td>4</td>
-            <td>4</td>
-            <td>5</td>
-            <td>3</td>
-            <td>4</td>
-            <td>66.67</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>Worker Safety Monitoring</td>
-            <td>5</td>
-            <td>5</td>
-            <td>3</td>
-            <td>4</td>
-            <td>3</td>
-            <td>4</td>
-            <td>62.50</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>Intelligent Document Processing</td>
-            <td>4</td>
-            <td>3</td>
-            <td>5</td>
-            <td>4</td>
-            <td>2</td>
-            <td>4</td>
-            <td>60.00</td>
-          </tr>
-          <tr>
-            <td>7</td>
-            <td>Customer Churn Prediction</td>
-            <td>5</td>
-            <td>5</td>
-            <td>3</td>
-            <td>4</td>
-            <td>2</td>
-            <td>3</td>
-            <td>50.00</td>
-          </tr>
-          <tr>
-            <td>8</td>
-            <td>Factory Floor Layout Optimization</td>
-            <td>4</td>
-            <td>4</td>
-            <td>3</td>
-            <td>3</td>
-            <td>3</td>
-            <td>3</td>
-            <td>48.00</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    <!-- Summary of Results and Recommendations Section -->
-    <section class="fade-section">
-      <h3>Summary of Results and Recommendations</h3>
-      <p>
-        We recommend progressing <strong>Dynamic Delivery Optimisation</strong>, <strong>Generative AI Assistant</strong>, and <strong>Predictive Maintenance</strong> based on their strong evaluation scores and strategic alignment. Here’s why these initiatives stand out:
-      </p>
-      <h4>1️⃣ Dynamic Delivery Optimisation (Score: 80)</h4>
-      <ul>
-        <li><strong>Efficiency Gains:</strong> Enhances logistics and resource allocation, reducing operational bottlenecks.</li>
-        <li><strong>Scalability:</strong> Can be implemented across multiple areas, improving responsiveness and adaptability.</li>
-        <li><strong>Cost Optimization:</strong> Streamlines processes, leading to significant cost savings over time.</li>
-      </ul>
-      <h4>2️⃣ Generative AI Assistant (Score: 80)</h4>
-      <ul>
-        <li><strong>Enhanced Productivity:</strong> Automates tasks and improves workflow efficiency, freeing up valuable human resources.</li>
-        <li><strong>User Engagement:</strong> Offers intuitive, AI-powered interactions that improve accessibility and knowledge sharing.</li>
-        <li><strong>Competitive Edge:</strong> Positions the organization as a leader in AI-driven solutions.</li>
-      </ul>
-      <h4>3️⃣ Predictive Maintenance (Score: 66.67)</h4>
-      <ul>
-        <li><strong>Proactive Risk Management:</strong> Reduces downtime and prevents costly failures through early intervention.</li>
-        <li><strong>Data-Driven Insights:</strong> Uses analytics to optimize maintenance schedules, improving asset longevity.</li>
-        <li><strong>Operational Stability:</strong> Supports smoother operations by minimizing unexpected disruptions.</li>
-      </ul>
-    </section>
+      </section>
+
+      <section class="fade-section">
+        <h3>Visualizing the Prioritization Framework</h3>
+        <div class="image-container">
+          <img src="Compressed_AI_Matrix.jpg" alt="AI Prioritization Matrix">
+          <p>📌 AI Matrix Explanation: Maps AI initiatives based on feasibility and cost.</p>
+        </div>
+      </section>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
