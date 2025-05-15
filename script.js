@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Fade-in effect for sections
   const sections = document.querySelectorAll(".fade-section");
 
   const observer = new IntersectionObserver((entries) => {
@@ -11,7 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }, { threshold: 0.3 });
 
-  sections.forEach((section) => observer.observe(section));
+  sections.forEach((section) => {
+    if (section.getBoundingClientRect().top < window.innerHeight * 0.7) {
+      section.style.opacity = 1;
+      section.style.transform = "translateY(0)";
+    }
+    observer.observe(section);
+  });
 
   // Toggle code visibility
   function toggleCode(id) {
