@@ -1,29 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Fade-in effect for sections
   const sections = document.querySelectorAll(".fade-section");
+  let currentIndex = 0;
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = "translateY(0)";
-      }
+  function showSection(index) {
+    sections.forEach((section, i) => {
+      section.style.display = i === index ? "block" : "none";
     });
-  }, { threshold: 0.3 });
-
-  sections.forEach((section) => observer.observe(section));
-
-  // Toggle code visibility
-  function toggleCode(id) {
-    var codeBlock = document.getElementById(id);
-    codeBlock.style.display = (codeBlock.style.display === "none") ? "block" : "none";
   }
 
-  // Attach event listeners to all code toggle buttons
-  document.querySelectorAll(".code-toggle-button").forEach(button => {
-    button.addEventListener("click", function () {
-      const targetId = this.getAttribute("data-target");
-      toggleCode(targetId);
-    });
+  document.getElementById("next").addEventListener("click", function () {
+    if (currentIndex < sections.length - 1) {
+      currentIndex++;
+      showSection(currentIndex);
+    }
   });
+
+  document.getElementById("prev").addEventListener("click", function () {
+    if (currentIndex > 0) {
+      currentIndex--;
+      showSection(currentIndex);
+    }
+  });
+
+  showSection(currentIndex);
 });
