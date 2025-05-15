@@ -81,10 +81,11 @@ tr:hover {
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  align-items: flex-start; /* Aligns content to the left */
+  justify-content: center; /* Centers vertically */
+  text-align: left; /* Ensures text within is aligned left */
   width: 100%;
+  margin: auto; /* Centers the section itself */
 }
 
 /* Gives a Line Between Sections */
