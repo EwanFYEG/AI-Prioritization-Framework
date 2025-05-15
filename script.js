@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Fade-in effect for sections
   const sections = document.querySelectorAll(".fade-section");
 
   const observer = new IntersectionObserver((entries) => {
@@ -11,4 +12,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }, { threshold: 0.3 });
 
   sections.forEach((section) => observer.observe(section));
+
+  // Toggle code visibility
+  function toggleCode(id) {
+    var codeBlock = document.getElementById(id);
+    codeBlock.style.display = (codeBlock.style.display === "none") ? "block" : "none";
+  }
+
+  // Attach event listeners to all code toggle buttons
+  document.querySelectorAll(".code-toggle-button").forEach(button => {
+    button.addEventListener("click", function () {
+      const targetId = this.getAttribute("data-target");
+      toggleCode(targetId);
+    });
+  });
 });
