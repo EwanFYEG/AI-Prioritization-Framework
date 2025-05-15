@@ -81,14 +81,33 @@ tr:hover {
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Aligns content to the left */
+  align-items: center; /* Centers content */
   justify-content: center; /* Centers vertically */
-  text-align: left; /* Ensures text within is aligned left */
+  text-align: center; /* Ensures text within is centered */
   width: 100%;
   margin: auto; /* Centers the section itself */
 }
 
-/* Gives a Line Between Sections */
+/* Styling for <details> summary */
+details summary {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center; /* Ensures the text is properly centered */
+  align-items: center;
+  gap: 10px; /* Space between number and text */
+  cursor: pointer;
+}
+
+/* Keeps the numbers aligned consistently */
+details summary::before {
+  content: ""; /* Placeholder for alignment */
+  display: inline-block;
+  width: 30px; /* Adjust width to keep numbers in line */
+  text-align: right;
+}
+
+/* Section Divider for Clear Separation */
 .section-divider {
   border: 0;
   height: 2px;
