@@ -15,10 +15,20 @@ body {
 }
 
 /* Header & Text Styling */
-h2, h3 {
+h3 {
   color: #2980b9;
   text-align: center;
 }
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #004D40; /* Dark teal for sophistication */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
 
 p {
   font-size: 16px;
