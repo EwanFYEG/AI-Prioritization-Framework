@@ -28,7 +28,6 @@
 
     <section class="fade-section">
       <h3>The Prioritization Matrix</h3>
-
       <table>
         <thead>
           <tr>
@@ -74,16 +73,69 @@
 
     <section class="fade-section">
       <h3>Visualizing the Prioritization Framework</h3>
-
       <div class="image-container">
-        <img src="Compressed AI Matrix" alt="AI Prioritization Matrix">
+        <img src="compressed-ai-matrix.png" alt="AI Prioritization Matrix">
         <p>📌 AI Matrix Explanation: Maps AI initiatives based on feasibility and cost.</p>
       </div>
 
+      <button onclick="toggleCode()">Show/Hide R Code</button>
+      <pre id="r-code" style="display: none;"><code>
+# Load required libraries
+library(ggplot2)
+
+# Define prioritization criteria with feasibility and cost scores
+eisenhower_data <- data.frame(
+  Criteria = c("Business Value", "Strategic Alignment", "Technical Feasibility", 
+               "Data Readiness", "Cost & Risk", "Time-to-Value"),
+  Feasibility = c(5, 4, 3, 4, 2, 4),
+  Cost = c(2, 3, 4, 2.5, 5, 1)
+)
+      </code></pre>
+
+      <script>
+        function toggleCode() {
+          var codeBlock = document.getElementById("r-code");
+          codeBlock.style.display = (codeBlock.style.display === "none") ? "block" : "none";
+        }
+      </script>
+
       <div class="image-container">
-        <img src="Corr Plot.png" alt="Correlation Plot">
+        <img src="corr-plot.png" alt="Correlation Plot">
         <p>📊 Correlation Analysis: Examines statistical relationships between feasibility, cost, and prioritization factors.</p>
       </div>
+
+      <button onclick="toggleCode()">Show/Hide R Code</button>
+      <pre id="r-code" style="display: none;"><code>
+        
+# Load library
+library(corrplot)
+
+# Compute correlation matrix
+cor_matrix <- cor(eisenhower_data)
+
+# Generate a more blended correlation plot
+corrplot(
+  cor_matrix, method = "shade", 
+  col = colorRampPalette(c("darkblue", "white", "darkred"))(200),
+  addCoef.col = "black",
+  tl.cex = 1.2,
+  cl.pos = "b",
+  number.cex = 0.8,
+  shade.col = NA, # Allows colors to blend
+  bg = "white", # Clean background for diffusion effect
+  mar = c(0, 0, 1, 0) # Adjust margins
+)
+
+      </code></pre>
+
+      <script>
+        function toggleCode() {
+          var codeBlock = document.getElementById("r-code");
+          codeBlock.style.display = (codeBlock.style.display === "none") ? "block" : "none";
+        }
+      </script>
+
+      
     </section>
 
     <section class="fade-section">
@@ -94,10 +146,7 @@
         <li><strong>Cost & Business Value show inverse correlation</strong> → Not all costly projects drive strong value.</li>
         <li><strong>Feasibility strongly links to Strategic Alignment</strong> → Well-aligned initiatives tend to be easier to execute.</li>
       </ul>
-
-      <p>
-        💡 *This framework enables transparent, evidence-based AI decision-making, evolving dynamically with market shifts and data availability.*
-      </p>
+      <p>💡 *This framework enables transparent, evidence-based AI decision-making, evolving dynamically with market shifts and data availability.*</p>
     </section>
 
   </div>
