@@ -50,7 +50,14 @@ thead tr {
   text-transform: uppercase;
 }
 
-th, td {
+th {
+  background-color: #2c81ba; /* Header background */
+  color: black; /* Ensures black text */
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+td {
   padding: 12px;
   border: 1px solid #ddd;
 }
