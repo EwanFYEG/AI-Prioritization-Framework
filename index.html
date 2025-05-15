@@ -207,7 +207,18 @@ eisenhower_data <- data.frame(
 )
 </code>
       </pre>
-
+<div class="summary-container">
+    <h4>Eisenhower Matrix Summary:</h4>
+    <p>This matrix categorizes AI initiatives based on <strong>Feasibility</strong> and <strong>Cost</strong>, assigning them to four quadrants:</p>
+    <ul>
+      <li><strong>Quick Wins (High Feasibility, Low Cost):</strong> Business Value and Time-to-Value fall here, meaning they should be prioritized for immediate action.</li>
+      <li><strong>Strategic Investments (High Feasibility, High Cost):</strong> Strategic Alignment and Data Readiness are positioned here—worthy long-term investments, despite their higher cost.</li>
+      <li><strong>Rethink (Low Feasibility, Low Cost):</strong> Technical Feasibility sits in this area, indicating the need for further refinement before implementation.</li>
+      <li><strong>Avoid (Low Feasibility, High Cost):</strong> Cost & Risk lands here, suggesting it's too expensive and difficult to justify implementation.</li>
+    </ul>
+    <p>This visualization is useful for balancing resources effectively and ensuring high-value, achievable initiatives get priority.</p>
+  </div>
+      
       <div class="image-container">
         <img src="Corr Plot.png" alt="Correlation Plot">
         <p>📊 Correlation Analysis: Examines statistical relationships between feasibility, cost, and prioritization factors.</p>
@@ -236,6 +247,16 @@ corrplot(
 )
 </code>
       </pre>
+<div class="summary-container">
+    <h4>Correlation Plot Summary:</h4>
+    <p>Your correlation matrix reveals relationships between <strong>key prioritization criteria</strong>:</p>
+    <ul>
+      <li><strong>Strong Positive Correlations:</strong> Business Value aligns well with Strategic Alignment and Data Readiness, meaning investments in these areas often reinforce each other.</li>
+      <li><strong>Negative or Weak Relationships:</strong> Cost & Risk has weaker connections with other criteria, reinforcing its high cost trade-off.</li>
+      <li><strong>Technical Feasibility Links:</strong> Technical Feasibility shows moderate relationships across multiple factors, meaning it plays a bridging role in viability analysis.</li>
+    </ul>
+    <p>Using this correlation visualization, you can assess dependencies and make evidence-based prioritization decisions.</p>
+  </div>
     </section>
 
     <section class="fade-section">
