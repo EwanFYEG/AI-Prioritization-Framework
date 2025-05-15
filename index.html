@@ -78,8 +78,8 @@
         <p>📌 AI Matrix Explanation: Maps AI initiatives based on feasibility and cost.</p>
       </div>
 
-      <button onclick="toggleCode()">Show/Hide R Code</button>
-      <pre id="r-code" style="display: none;"><code>
+      <button class="code-toggle-button" data-target="r-code-1">Show/Hide R Code</button>
+      <pre id="r-code-1" style="display: none;"><code>
 # Load required libraries
 library(ggplot2)
 
@@ -92,21 +92,13 @@ eisenhower_data <- data.frame(
 )
       </code></pre>
 
-      <script>
-        function toggleCode() {
-          var codeBlock = document.getElementById("r-code");
-          codeBlock.style.display = (codeBlock.style.display === "none") ? "block" : "none";
-        }
-      </script>
-
       <div class="image-container">
         <img src="Corr Plot.png" alt="Correlation Plot">
         <p>📊 Correlation Analysis: Examines statistical relationships between feasibility, cost, and prioritization factors.</p>
       </div>
 
-      <button onclick="toggleCode()">Show/Hide R Code</button>
-      <pre id="r-code" style="display: none;"><code>
-        
+      <button class="code-toggle-button" data-target="r-code-2">Show/Hide R Code</button>
+      <pre id="r-code-2" style="display: none;"><code>
 # Load library
 library(corrplot)
 
@@ -125,17 +117,8 @@ corrplot(
   bg = "white", # Clean background for diffusion effect
   mar = c(0, 0, 1, 0) # Adjust margins
 )
-
       </code></pre>
 
-      <script>
-        function toggleCode() {
-          var codeBlock = document.getElementById("r-code");
-          codeBlock.style.display = (codeBlock.style.display === "none") ? "block" : "none";
-        }
-      </script>
-
-      
     </section>
 
     <section class="fade-section">
